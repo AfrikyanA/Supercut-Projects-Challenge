@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Application</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./assets/icons/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div id="auth-container">
+        <h2>Login / Sign Up</h2>
+        <form id="auth-form">
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" id="login-button">Login</button>
+            <button type="button" id="signup-button">Sign Up</button>
+        </form>
+    </div>
+
+    <div id="chat-container" style="display: none;">
+        <aside id="active-users-container">
+            <h3>Active Users</h3>
+            <ul id="active-users-list" class="users-list"></ul>
+        </aside>
+
+        <main id="chat-area">
+            <div id="message-display"></div>
+            <div id="message-input-container">
+                <input type="text" id="message-input" placeholder="Type your message..." required>
+                <button id="send-button">Send</button>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.socket.io/4.5.0/socket.io.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
